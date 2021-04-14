@@ -34,7 +34,7 @@ jobs:
       - name: West Zephyr export
         run: west zephyr-export
       - name: West Build (Andrea)
-        run: west build -s zmk/app -b andrea -- -DZMK_CONFIG="/github/workspace/config"
+        run: west build -s zmk/app -b andrea -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Andrea DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/andrea.dts.pre.tmp
