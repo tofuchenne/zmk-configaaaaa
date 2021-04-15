@@ -1,5 +1,5 @@
-identifier: andrea_rev1.1
-name: andrea
+identifier: andrea_rev2
+name: Andrea Rev2
 type: mcu
 arch: arm
 toolchain:

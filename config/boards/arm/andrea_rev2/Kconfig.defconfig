@@ -3,7 +3,7 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_ANDREA
+if BOARD_ANDREA_REV2
 
 config ZMK_KEYBOARD_NAME
 	default "Andrea"
