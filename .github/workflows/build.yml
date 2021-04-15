@@ -47,17 +47,3 @@ jobs:
         with:
           name: andrea
           path: Andrea-31-Mar-2021-Firmware.uf2
-      - name: West Build (Andrea 1.1)
-        run: west build -s zmk/app -b andrea_rev1.1 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Andrea 1.1 DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/andrea_rev1.1.dts.pre.tmp
-      - name: Andrea 1.1 Kconfig file
-        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
-      - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 Andrea-14-Apr-2021-Firmware.uf2
-      - name: Archive (Andrea 1.1)
-        uses: action/upload-artifact@v2
-        with:
-          name: andrea_rev1.1
-          path: Andrea-14-Apr-2021-Firmware.uf2
