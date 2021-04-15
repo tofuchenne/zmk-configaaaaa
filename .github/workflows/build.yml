@@ -57,7 +57,7 @@ jobs:
       - name: Rename zmk.uf2
         run: cp build/zephyr/zmk.uf2 Andrea-14-Apr-2021-Firmware.uf2
       - name: Archive (Andrea 1.1)
-        uses: action/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: andrea_rev1.1
           path: Andrea-14-Apr-2021-Firmware.uf2
