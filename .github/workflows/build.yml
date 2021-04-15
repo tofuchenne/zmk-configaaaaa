@@ -45,7 +45,7 @@ jobs:
       - name: West Build (Andrea 1.1)
         run: west build -s zmk/app -b andrea_rev1.1 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Andrea 1.1 DTS File
-        -if ${{ always() }}
+        if: ${{ always() }}
         run: cat -n build/zephyr/andrea_rev1.1.dts.pre.tmp
       - name: Andrea 1.1 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
