@@ -50,7 +50,7 @@ jobs:
           name: andrea_31-mar-2021
           path: Andrea-31-Mar-2021-Firmware.uf2
       - name: West Build (Andrea Rev2)
-        run: west build -s zmk/app -b andrea_rev2 -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+        run: west build -s zmk/app -b andrea_rev2 --pristine -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
       - name: Andrea Rev2 DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/andrea_rev2.dts.pre.tmp
