@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: zmkfirmware/zmk-build-arm:2.5
+      image: zmkfirmware/zmk-build-arm:stable
     name: Build
     steps:
       - name: Checkout
@@ -37,9 +37,6 @@ jobs:
         run: cp ${GITHUB_WORKSPACE}/andrea.keymap ${GITHUB_WORKSPACE}/config/boards/arm/andrea/andrea.keymap && cp ${GITHUB_WORKSPACE}/andrea.keymap ${GITHUB_WORKSPACE}/config/boards/arm/andrea_rev2/andrea_rev2.keymap
       - name: West Build (Andrea)
         run: west build -s zmk/app -b andrea -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Andrea DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/andrea.dts.pre.tmp
       - name: Andrea Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
@@ -51,9 +48,6 @@ jobs:
           path: Andrea-31-Mar-2021-Firmware.uf2
       - name: West Build (Andrea Rev2)
         run: west build -s zmk/app -b andrea_rev2 --pristine -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: Andrea Rev2 DTS File
-        if: ${{ always() }}
-        run: cat -n build/zephyr/andrea_rev2.dts.pre.tmp
       - name: Andrea Rev 2 Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
