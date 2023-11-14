@@ -20,11 +20,11 @@
 //   | CTRL  |         ALT   |  LT(SPACE, 1) | BSPC  |   LT(SPACE,1) | ALT   |                                 LEFT  | DOWN  | RIGHT |
 
 			bindings = <
-    &kp ESC          &kp NUM_1        &kp NUM_2     &kp NUM_3     &kp NUM_4     &kp NUM_5        &kp NUM_6        &kp NUM_7        &kp NUM_8        &kp NUM_9        &kp NUM_0        &kp MINUS        &kp EQL          &kp BKSP         &kp DEL         &kp PSCRN
-    &kp TAB          &kp Q            &kp W         &kp E         &kp R         &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P            &kp LBKT         &kp RBKT         &kp BSLH                         &kp PG_UP
+    &kp ESC          &kp NUM_1        &kp NUM_2     &kp NUM_3     &kp NUM_4     &kp NUM_5        &kp NUM_6        &kp NUM_7        &kp NUM_8        &kp NUM_9        &kp NUM_0        &kp MINUS        &kp EQL          &kp BSLH         &kp DEL         &kp PSCRN
+    &kp TAB          &kp Q            &kp W         &kp E         &kp R         &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P            &kp LBKT         &kp RBKT         &kp BKSP                         &kp PG_UP
     &mt LCTRL CAPS   &kp A            &kp S         &kp D         &kp F         &kp G            &kp H            &kp J            &kp K            &kp L            &kp SCLN         &kp QUOT                          &kp ENTER                        &kp PG_DN
     &kp LSHFT        &kp Z            &kp X         &kp C         &kp V         &kp B            &kp B            &kp N            &kp M            &kp CMMA         &kp DOT          &kp FSLH         &kp RSHFT                         &kp UP
-    &kp LCTRL                         &kp LALT                    &lt FN SPACE  &kp BKSP         &lt FN SPACE     &kp RALT                                                                                              &kp LEFT         &kp DOWN        &kp RIGHT
+    &kp LCTRL                         &kp LALT                    &kp SPACE     &lt FN BKSP      &lt FN SPACE     &kp RALT                                                                                              &kp LEFT         &kp DOWN        &kp RIGHT
 			>;
 			
 			sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
@@ -40,11 +40,11 @@
 //   | TRANS |         GUI   |         TRANS | TRANS |         TRANS | MENU  |                                 HOME   | PG_DN | END   |
 
 			bindings = <
-    &kp GRAVE        &kp F1           &kp F2           &kp F3          &kp F4          &kp F5        &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &trans           &trans         &kp C_MUTE
-    &trans           &rgb_ug RGB_TOG  &trans           &rgb_ug RGB_HUI &rgb_ug RGB_HUD &trans        &kp PSCRN        &kp SLCK         &kp PAUSE_BREAK  &trans           &trans           &trans           &trans           &trans                          &kp C_PREV
-    &trans           &rgb_ug RGB_EFF  &rgb_ug RGB_EFR  &rgb_ug RGB_SAI &rgb_ug RGB_SAD &trans        &kp INS          &kp HOME         &kp PG_UP        &trans           &trans           &trans                            &trans                          &kp C_NEXT
-    &kp LSHFT        &trans           &trans           &rgb_ug RGB_BRI &rgb_ug RGB_BRD &trans        &trans           &kp DEL          &kp END          &kp PG_DN        &trans           &trans           &trans                            &kp PG_UP
-    &trans                            &kp LGUI                         &trans          &trans        &trans           &kp C_MENU                                                                                            &kp HOME         &kp PG_DN      &kp END        
+    &kp GRAVE     &kp F1            &kp F2           &kp F3          &kp F4          &kp F5          &kp F6           &kp F7           &kp F8           &kp F9           &kp F10          &kp F11          &kp F12          &bootloader        &sys_reset          &kp C_MUTE
+    &bt BT_CLR    &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3    &bt BT_SEL 4    &bt BT_SEL 5    &kp PSCR         &kp SLCK         &kp PAUSE_BREAK  &trans           &trans           &trans           &trans           &trans                                 &kp C_NEXT
+    &trans        &rgb_ug RGB_TOG   &rgb_ug RGB_EFR  &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_HUI &kp INS          &kp HOME         &kp PG_UP        &trans           &trans           &trans                            &trans                          &kp C_PREV
+    &kp LSHFT     &rgb_ug RGB_EFF   &trans           &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_HUD &trans           &kp DEL          &kp END          &kp PG_DN        &trans           &trans           &trans                            &kp PG_UP
+    &trans                          &kp LGUI              &trans          &trans                     &trans           &trans                                                                                            &kp HOME         &kp PG_DN      &kp END        
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
